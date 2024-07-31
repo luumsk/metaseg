@@ -1,0 +1,25 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 2, 'patch_size': [128, 160, 112], 'median_image_size_in_voxels': [147.0, 184.0, 144.0], 'spacing': [1.0, 1.0, 1.0], 'normalization_schemes': ['ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization'], 'use_mask_for_norm': [True, True, True, True], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 1, 1, 1], 'n_conv_per_stage_decoder': [2, 2, 2, 1, 1], 'num_pool_per_axis': [5, 5, 4], 'pool_op_kernel_sizes': [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 1]], 'conv_kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'unet_max_num_features': 320, 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': False} 
+ 
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset999_Metastases', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [1.0, 1.0, 1.0], 'original_median_shape_after_transp': [147, 184, 144], 'image_reader_writer': 'NibabelIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 3095738.75, 'mean': 74550.1796875, 'median': 501.5321960449219, 'min': -154633.234375, 'percentile_00_5': 77.43592834472656, 'percentile_99_5': 1042318.875, 'std': 200844.765625}, '1': {'max': 2545609.75, 'mean': 33200.8828125, 'median': 367.0, 'min': -77666.6875, 'percentile_00_5': 86.41248908996582, 'percentile_99_5': 542952.0, 'std': 111704.859375}, '2': {'max': 134454.5, 'mean': 2486.435302734375, 'median': 1500.9769287109375, 'min': -185.33804321289062, 'percentile_00_5': 124.0, 'percentile_99_5': 11859.2998046875, 'std': 4658.9404296875}, '3': {'max': 61782.0078125, 'mean': 424.22119140625, 'median': 185.5244598388672, 'min': -6.830599308013916, 'percentile_00_5': 38.69954299926758, 'percentile_99_5': 2230.011962890625, 'std': 1594.9993896484375}}} 
+ 
+2024-07-26 15:21:27.963361: unpacking dataset... 
+2024-07-26 15:33:27.433134: unpacking done... 
+2024-07-26 15:33:27.794379: do_dummy_2d_data_aug: False 
+2024-07-26 15:33:27.883693: Creating new 5-fold cross-validation split... 
+2024-07-26 15:33:27.892772: Desired fold for training: 1 
+2024-07-26 15:33:27.893045: This split has 521 training and 130 validation cases. 
+2024-07-26 15:33:35.873920: Unable to plot network architecture: 
+2024-07-26 15:33:35.874117: failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH 
+2024-07-26 15:33:35.959451:  
+2024-07-26 15:33:35.959634: Epoch 0 
+2024-07-26 15:33:35.960147: Current learning rate: 0.01 
