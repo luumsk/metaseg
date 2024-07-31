@@ -7,7 +7,7 @@
 # nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSwinUNETR
 
 # nnUNetTrainerSegResNet
-# nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSegResNet
+nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSegResNet --c
 
 # nnUNetTrainerUNETR
 # nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerUNETR
@@ -15,4 +15,4 @@
 # nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerUNETR --c
 
 # nnUNet default
-nnUNetv2_train 111 3d_fullres 0
+# nnUNetv2_train 111 3d_fullres 0
