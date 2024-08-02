@@ -7,7 +7,7 @@
 # nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSwinUNETR
 
 # nnUNetTrainerSegResNet
-nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSegResNet --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSegResNet
 
 # nnUNetTrainerUNETR
 # nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerUNETR
@@ -16,3 +16,7 @@ nnUNetv2_train 111 3d_fullres 0 -tr nnUNetTrainerSegResNet --c
 
 # nnUNet default
 # nnUNetv2_train 111 3d_fullres 0
+
+# CUDA_VISIBLE_DEVICES=1 nnUNetv2_train 111 3d_fullres 1 [--npz] &\
+# CUDA_VISIBLE_DEVICES=2 nnUNetv2_train 111 3d_fullres 2 [--npz] &\
+# CUDA_VISIBLE_DEVICES=3 nnUNetv2_train 111 3d_fullres 3 [--npz] &\
