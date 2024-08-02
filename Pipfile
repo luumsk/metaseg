@@ -4,15 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-numpy = "*"
+numpy = "==1.26.4"
 pandas = "*"
 matplotlib = "*"
-torch = "*"
-torchvision = "*"
+torch = "==2.0.1"
+torchvision = "==0.15.2"
 nibabel = "*"
 monai = "==1.3.0"
 celluloid = "*"
+causal-conv1d = "*"
 
 [dev-packages]
 ipykernel = "*"
-
