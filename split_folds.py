@@ -20,10 +20,10 @@ for i, (train_index, val_index) in enumerate(kf.split(patients)):
     val_patients = patients[val_index]
     print(f'Fold {i}: {len(train_patients)} train patients, {len(val_patients)} val patients')
 
-    train_fns_fold = [fn[:19] for fn in fns if fn[:15] in train_patients]
+    train_fns_fold = list(set([fn[:19] for fn in fns if fn[:15] in train_patients]))
     print(f'{len(train_fns_fold)} train files')
 
-    val_fns_fold = [fn[:19] for fn in fns if fn[:15] in val_patients]
+    val_fns_fold = list(set([fn[:19] for fn in fns if fn[:15] in val_patients]))
     print(f'{len(val_fns_fold)} val files')
     print('')
 
