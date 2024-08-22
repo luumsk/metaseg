@@ -31,7 +31,7 @@ for i, (train_index, val_index) in enumerate(kf.split(patients)):
  
 # Save splits
 with open('splits_final.json', 'w') as f:
-    json.dump(splits, f, indent=4)
+    json.dump(splits, f, sort_keys=True, indent=4)
 
 # Test duplicated patients in train and val sets
 print('Test duplicated patients in train and val sets')
