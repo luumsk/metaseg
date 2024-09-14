@@ -13,6 +13,8 @@ nibabel = "*"
 monai = "==1.3.0"
 celluloid = "*"
 causal-conv1d = "*"
+statsmodels = "*"
+scikit-posthocs = "*"
 
 [dev-packages]
 ipykernel = "*"
